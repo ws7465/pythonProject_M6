@@ -66,7 +66,11 @@ class Vehicle : #
         return f'Цвет: {self.__color}'
 #
     def print_info(self) : # - распечатывает результаты методов
-        return (f'{self.get_model()} {self.get_model()} {self.get_model()} '
+        print (f'{self.get_model()}')
+        print (f'{self.get_horsepower()}')
+        print (f'{self.get_color()}')
+        print(f'Владелец:  {self.owner}')
+        return (f'{self.get_model()} {self.get_horsepower()} {self.get_color()} '
                 f'Владелец:  {self.owner}')
 # get_model, get_horsepower, get_color; а так же владельца в формате "Владелец: <имя>"
     def set_color(self, new_color) : #set_color - принимает аргумент new_color(str),
@@ -95,18 +99,18 @@ class Sedan(Vehicle) : #
 # Пример результата выполнения программы:
 # Исходный код:
 # # Текущие цвета __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
-# vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
+vehicle1 = Sedan('Fedos', 'Toyota Mark II', 500, 'blue')
 #
 # # Изначальные свойства
-# vehicle1.print_info()
+vehicle1.print_info()
 #
 # # Меняем свойства (в т.ч. вызывая методы)
-# vehicle1.set_color('Pink')
-# vehicle1.set_color('BLACK')
-# vehicle1.owner = 'Vasyok'
+vehicle1.set_color('Pink')
+vehicle1.set_color('BLACK')
+vehicle1.owner = 'Vasyok'
 #
 # # Проверяем что поменялось
-# vehicle1.print_info()
+vehicle1.print_info()
 #
 # Вывод на консоль:
 # Модель: Toyota Mark II
