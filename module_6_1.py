@@ -44,53 +44,52 @@
 ###
 ##
 class Animal : # животные
-    def __init__(self, name, alive, fed) : #
+    def __init__(self, name, alive = True , fed = False ) : #
         self.name = name #индивидуальное название каждого животного
         self.alive = True # живой/(мёртвый)
         self.fed = False # голодный/(накормленный)
 #
     def eat(self, food) : # едим
         if food.edible : # еда съедобная
-            print (f' {self.name} съел {food.name}')
+            print (f'{self.name} съел {food.name}')
             self.fed = True # наелся
         else : #
-            print(f' {self.name} не стал есть {food.name}')
+            print(f'{self.name} не стал есть {food.name}')
             self.alive = False # помер
 ##
 class Mammal(Animal) : # млекопитающие
-    m=''
+    pass
 ##
 class Predator(Animal) : # хищники
-    p=''
+    pass
 ##
 class Plant : # растения
-    def __init__(self, name, edible) : #
+    edible = False # (съедобность)
+    def __init__(self, name):  #
         self.name = name # индивидуальное название каждого растения
-        self.edible = False # (съедобность)
 ##
 class Flower(Plant) : # цветы
-    f=''
+    pass
 ##
 class Fruit(Plant) : # фрукты
     edible = True # (съедобность)
-##
 ###
 # Пример результата выполнения программы:
 # Выполняемый код(для проверки):
-# a1 = Predator('Волк с Уолл-Стрит')
-# a2 = Mammal('Хатико')
-# p1 = Flower('Цветик семицветик')
-# p2 = Fruit('Заводной апельсин')
+a1 = Predator('Волк с Уолл-Стрит')
+a2 = Mammal('Хатико')
+p1 = Flower('Цветик семицветик')
+p2 = Fruit('Заводной апельсин')
 #
-# print(a1.name)
-# print(p1.name)
+print(a1.name)
+print(p1.name)
 #
-# print(a1.alive)
-# print(a2.fed)
-# a1.eat(p1)
-# a2.eat(p2)
-# print(a1.alive)
-# print(a2.fed)
+print(a1.alive)
+print(a2.fed)
+a1.eat(p1)
+a2.eat(p2)
+print(a1.alive)
+print(a2.fed)
 #
 # # Что произошло: Хищник попытался съесть цветок и погиб,
 #                  млекопитающее съело фрукт и насытилось.
