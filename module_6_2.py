@@ -47,11 +47,40 @@
 #     Атрибут __PASSENGERS_LIMIT = 5 (в седан может поместиться только 5 пассажиров)
 #
 ###
+##
 class Vehicle : #
-    pass
+    __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white'] # список допустимых цветов
+    def __init__(self, owner, __model, __engine_power, __color) : #
+        self.owner = str(owner) #(str) - владелец транспорта. (владелец может меняться)
+        self.__model = str(__model) #(str) - модель (марка) транспорта. (не можем менять )
+        self.__engine_power = int(__engine_power) #(int) - мощность двигателя. (не можем менять)
+        self.__color = str(__color) # (str) - название цвета. (мы не можем менять )
+#
+    def get_model(self) : # - возвращает строку: "Модель: <название модели транспорта>"
+        return f'Модель: {self.__model}'
+#
+    def get_horsepower(self) : # - возвращает строку: "Мощность двигателя: <мощность>"
+        return f'Мощность двигателя: {self.__engine_power}'
+#
+    def get_color(self ) : # - возвращает строку: "Цвет: <цвет транспорта>"
+        return f'Цвет: {self.__color}'
+#
+    def print_info(self) : # - распечатывает результаты методов
+        return (f'{self.get_model()} {self.get_model()} {self.get_model()} '
+                f'Владелец:  {self.owner}')
+# get_model, get_horsepower, get_color; а так же владельца в формате "Владелец: <имя>"
+    def set_color(self, new_color) : #set_color - принимает аргумент new_color(str),
+        new_color = str(new_color).lower() #
+        if new_color in self.__COLOR_VARIANTS : #
+            self.__color = new_color #
+        else :
+            print(f'Нельзя сменить цвет на {new_color}')
+    # меняет цвет __color на new_color, если он есть в списке __COLOR_VARIANTS,
+#                       в противном случае выводит на экран надпись:
+#                       "Нельзя сменить цвет на <новый цвет>".
+##
 class Sedan(Vehicle) : #
-    pass
-
+    __PASSENGERS_LIMIT = 5
 ###
 #
 # Пункты задачи:
