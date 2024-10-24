@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b08ef79-5a77-4f5a-a85b-2f107a875371" name="Changes" comment="2024.10.23 module_6_1 19:31">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1b08ef79-5a77-4f5a-a85b-2f107a875371" name="Changes" comment="2024.10.24 module_6_1 11:15">
       <change beforePath="$PROJECT_DIR$/module_6_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_6_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,11 +107,20 @@
       <option name="project" value="LOCAL" />
       <updated>1729701373133</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2024.10.24 module_6_1 11:15">
+      <option name="closed" value="true" />
+      <created>1729757715690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729757715690</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2024.10.23 module_6_1 19:31" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024.10.23 module_6_1 19:31" />
+    <MESSAGE value="2024.10.24 module_6_1 11:15" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024.10.24 module_6_1 11:15" />
   </component>
 </project>

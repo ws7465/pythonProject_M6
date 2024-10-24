@@ -7,8 +7,10 @@
 #
 # Создайте:
 # 2 класса родителя: Animal, Plant
-# Для класса Animal атрибуты alive = True(живой) и fed = False(накормленный), name - индивидуальное название каждого животного.
-# Для класса Plant атрибут edible = False(съедобность), name - индивидуальное название каждого растения
+# Для класса Animal атрибуты alive = True(живой) и fed = False(накормленный),
+#                            name - индивидуальное название каждого животного.
+# Для класса Plant атрибут edible = False(съедобность),
+#                            name - индивидуальное название каждого растения
 #
 # 4 класса наследника:
 # Mammal, Predator для Animal.
@@ -19,7 +21,8 @@
 #
 # Метод eat должен работать следующим образом:
 # Если переданное растение (food) съедобное
-#       - выводит на экран "<self.name> съел <food.name>", меняется атрибут fed на True.
+#       - выводит на экран "<self.name> съел <food.name>",
+#         меняется атрибут fed на True.
 # Если переданное растение (food) не съедобное
 #       - выводит на экран "<self.name> не стал есть <food.name>",
 #           меняется атрибут alive на False.
@@ -40,38 +43,36 @@
 #     Создайте объекты этих классов.
 ###
 ##
-class Animal : #
+class Animal : # животные
     def __init__(self, name, alive, fed) : #
-        self.name = name
-        self.alive = True
-        self.fed = False
+        self.name = name #индивидуальное название каждого животного
+        self.alive = True # живой/(мёртвый)
+        self.fed = False # голодный/(накормленный)
 #
-    def eat(self, food) : #
-        if True : #
-            # Если переданное растение(food) съедобное - выводит на экран
-            # print (f" {self.name} съел {food.name}"
-            # и меняется атрибут
-            food.fed = True #
+    def eat(self, food) : # едим
+        if food.edible : # еда съедобная
+            print (f' {self.name} съел {food.name}')
+            self.fed = True # наелся
         else : #
-            # Если переданное растение(food) не съедобное - выводит на экран
-            # "<self.name> не стал есть <food.name>", меняется атрибут
-            # alive на False.
-            # Т.е если животному дать съедобное растение, то животное насытится, если
-            # не съедобное - погибнет.
+            print(f' {self.name} не стал есть {food.name}')
+            self.alive = False # помер
 ##
-class Mammal(Animal) : #
+class Mammal(Animal) : # млекопитающие
+    m=''
 ##
-class Predator(Animal) : #
+class Predator(Animal) : # хищники
+    p=''
 ##
-class Plant : #
+class Plant : # растения
     def __init__(self, name, edible) : #
-        self.name = name
-        self.edible = False
+        self.name = name # индивидуальное название каждого растения
+        self.edible = False # (съедобность)
 ##
-class Flower(Plant) : #
+class Flower(Plant) : # цветы
+    f=''
 ##
-class Fruit(Plant) : #
-    edible = True
+class Fruit(Plant) : # фрукты
+    edible = True # (съедобность)
 ##
 ###
 # Пример результата выполнения программы:
