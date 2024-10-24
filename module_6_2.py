@@ -73,6 +73,7 @@ class Vehicle : #
         return (f'{self.get_model()} {self.get_horsepower()} {self.get_color()} '
                 f'Владелец:  {self.owner}')
 # get_model, get_horsepower, get_color; а так же владельца в формате "Владелец: <имя>"
+#
     def set_color(self, new_color) : #set_color - принимает аргумент new_color(str),
         new_color = str(new_color).lower() #
         if new_color in self.__COLOR_VARIANTS : #
