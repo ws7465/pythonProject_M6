@@ -39,7 +39,40 @@
 #           атрибутами и методами. При необходимости переопределите значения атрибутов.
 #     Создайте объекты этих классов.
 ###
-
+##
+class Animal : #
+    def __init__(self, name, alive, fed) : #
+        self.name = name
+        self.alive = True
+        self.fed = False
+#
+    def eat(self, food) : #
+        if True : #
+            # Если переданное растение(food) съедобное - выводит на экран
+            # print (f" {self.name} съел {food.name}"
+            # и меняется атрибут
+            food.fed = True #
+        else : #
+            # Если переданное растение(food) не съедобное - выводит на экран
+            # "<self.name> не стал есть <food.name>", меняется атрибут
+            # alive на False.
+            # Т.е если животному дать съедобное растение, то животное насытится, если
+            # не съедобное - погибнет.
+##
+class Mammal(Animal) : #
+##
+class Predator(Animal) : #
+##
+class Plant : #
+    def __init__(self, name, edible) : #
+        self.name = name
+        self.edible = False
+##
+class Flower(Plant) : #
+##
+class Fruit(Plant) : #
+    edible = True
+##
 ###
 # Пример результата выполнения программы:
 # Выполняемый код(для проверки):
